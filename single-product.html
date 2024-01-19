@@ -26,6 +26,10 @@
             padding: 10px;
         }
 
+        .star i {
+            cursor: pointer;
+        }
+
         #myTabs .nav-link.active,
         #myTabs .show>.nav-link {
             background-color: #01b7e0;
@@ -37,7 +41,27 @@
         .nav-link {
             color: #000;
         }
-        /* kartik */
+
+        .product-quantity-btns a button {
+            padding: 8px;
+            background-color: #01b7e0;
+            color: #fff;
+            border: 0;
+            border-radius: 5px
+        }
+
+        .cart-count {
+            background: #000;
+            color: #fff;
+            width: 20px;
+            text-align: center;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 13px;
+            position: relative;
+            top: -8px;
+            left: -12px;
+        }
     </style>
 
 
@@ -70,10 +94,12 @@
                         <a href=""><img src="images/logo/coolcarelogo.jpg" class="w-25"></a>
                     </div>
                     <div class="col-md-6 text-end pt-4">
-                        <div class="top-icon" style="cursor: pointer; padding: 0 44px;">
-                            <a href=""><i class="fa-solid fa-magnifying-glass px-2" style="color: #676767;"></i></a>
-                            <a href=""><i class="fa-regular fa-heart px-2" style="color: #676767;"></i></a>
-                            <a href=""><i class="fa-solid fa-cart-shopping px-2" style="color: #676767;"></i></a>
+                        <div class="top-icon d-flex justify-content-end" style="cursor: pointer; padding: 0 44px;">
+                            <a href="#"><i class="fa-solid fa-magnifying-glass px-2" style="color: #676767;"></i></a>
+                            <a href="#"><i class="fa-regular fa-heart px-2" style="color: #676767;"></i></a>
+                            <a href="#" class="d-flex">
+                                <i class="fa-solid fa-cart-shopping px-2" style="color: #676767;"></i><span
+                                    class="cart-count" id="cartItemCount">0</span></a>
                             <a href="login.html"><i class="fa-regular fa-user px-2" style="color: #676767;"></i> </a>
                         </div>
                     </div>
@@ -158,7 +184,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 mt-2">
-                <h2 class=" text-white pb-2 pt-5 text-center">Terms & Conditions</h2>
                 <nav aria-label="breadcrumb" style="margin: 0 auto;">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-ite"><a href="#" class="mx-1">Home /</a></li>
@@ -213,7 +238,7 @@
                                     <option value="3">4</option>
                                     <option value="3">5</option>
                                 </select>
-                                <label for="select-option" class="month-select">Delivery Date</label> <br>
+                                <label for="select-option" class="month-select mt-2">Delivery Date</label> <br>
                                 <input type="date" id="selectDate" name="selectDate">
                                 </select>
                             </div>
@@ -222,27 +247,25 @@
                             <div class="product-quantity d-flex mt-3">
                                 <div class="mx-2 d-flex">
                                     <p class="mx-2"> Qty</p>
-
-                                    <input type="number" id="quantity" value="1"
-                                        oninput="updateQuantityFromInput(this.value)">
+                                    <input type="number" id="quantity" value="1">
                                 </div>
                                 <div class="product-quantity-btns d-flex">
                                     <a href="#" class="text-decoration-none mx-2" id="show-hidden-menu">
-                                        <button class="animate-btx" style="margin: 0px auto;">
+                                        <button class="product-buy-btn" onclick="addToCart()">
                                             Add to Cart
                                             <span id="arrow-icon"></span>
                                         </button>
                                     </a>
                                     <a href="#" class="text-decoration-none" id="show-hidden-menu">
-                                        <button class="animate-btx" style="margin: 0px auto;">
+                                        <button class="product-buy-btn">
                                             Add to Wishlist
                                             <span id="arrow-icon"></span>
                                         </button>
                                     </a>
                                 </div>
                             </div>
+                        </form>
                     </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -267,7 +290,6 @@
                 <div class="tab-pane fade" id="content2">
                     <p>Content for Tab 2 goes here.</p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -287,7 +309,7 @@
                             <li class="pt-2">Home</li>
                         </a>
                         <a href="" class="text-decoration-none text-white">
-                            <li class="pt-2">Leptop</li>
+                            <li class="pt-2">Laptop</li>
                         </a>
                         <a href="" class="text-decoration-none text-white">
                             <li class="pt-2">Heater</li>
@@ -448,6 +470,25 @@
                 // If it is, set the input value to 0
                 document.getElementById("quantity").value = 0;
             }
+        }
+    </script>
+
+     
+    <script>
+        // JavaScript function to handle "Add to Cart" button click
+        function addToCart()
+        {
+            // Get the current item count from the span element
+            var currentItemCount = parseInt(document.getElementById('cartItemCount').innerText);
+
+            // Get the quantity input value
+            var quantity = parseInt(document.getElementById('quantity').value); 
+
+            // Increment the item count based on the quantity
+            var newItemCount = currentItemCount + quantity;
+
+            // Update the span element with the new item count
+            document.getElementById('cartItemCount').innerText = newItemCount; 
         }
     </script>
 
