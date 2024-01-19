@@ -690,3 +690,9 @@ input {
   color: #000;
 }
 /* -----------------------------sigle product page css end-------------------------------------------------------------------- */ 
+/* -----------------------------Laptop on rent gurgaon-------------------------------------------------------------------- */ 
+.normal-banner{
+  background-image: url('../images/man-using-digital-tablet-psd-mockup-smart-technology.jpg');
+  height: 10vh;
+  background-size: cover;
+}
