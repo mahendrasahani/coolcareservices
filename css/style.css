@@ -8,6 +8,7 @@ body{
   font-family: "Rubik", sans-serif !important;
 }
 
+
 @font-face {
   font-family: 'fonttype1';
   src: url('/font/MarlinGeo-ExtraBold.ttf');
@@ -32,7 +33,7 @@ body{
   position: relative;
     
 }
-#header-ul li::before {
+#header-ul a.nav-link::before {
   content: ""; 
   position: absolute;
   width: 0; 
@@ -43,7 +44,7 @@ body{
   left:2px;
  
 }
-#header-ul li:hover::before {
+#header-ul a.nav-link:hover::before {
   width: 80%;
   transform: translateX(0); 
 }
@@ -96,6 +97,17 @@ body{
 .icon-like{
   left: 25px;
 }
+ul.dropdown-menu{
+  margin: 2px 0;
+}
+ul.dropdown-menu li a.dropdown-item{
+  padding: 11px 17px;
+  font-size: 13px;
+}
+.dropdown-item.active, .dropdown-item:active{
+  background-color: #01b7e0 !important;
+  color: white !important;
+}
 
 .icon-like.selected{
   fill: red;
@@ -108,6 +120,15 @@ body{
 .icon-bookmark.selected{
   fill: #fbda61;
 }
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
 
 .person_img{
     margin-top: 15px;
@@ -211,13 +232,13 @@ button.btn.btn-warning.animation{
   color: white;
   border: none;
   padding: 5px 18px;
+  border-radius: 0;
   font-size: 10px;
 }
 button.btn.btn-warning.animation:hover{
  
   background-color: #02b8df;
 }
-
 
 .side-set{
   font-size: 9px;
@@ -336,9 +357,6 @@ h3.text-center.mt-5.mb-5.before::before {
   margin-top: 100px;
   background: #26292e;
   padding: 82px 0px 0 0;
-}
-.hover-animate li:hover {
-  padding-left: 2px;
 }
 
 .hover-funtion{
@@ -696,3 +714,41 @@ input {
   height: 10vh;
   background-size: cover;
 }
+#back-top {
+  display: inline-block;
+  background-color: #01316b;
+  width: 37px;
+    height: 32px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#back-top::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 35px;
+  color: #fff;
+}
+#back-top:hover {
+  cursor: pointer;
+  background-color: #02b8df;
+  
+}
+#back-top:active {
+  background-color: #02b8df;
+}
+#back-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+

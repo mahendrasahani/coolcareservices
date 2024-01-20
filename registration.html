@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- style CSS -->
+     <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <!-- Head title -->
+    <title>Home Appliances On Rent In Gurgaon- Appliance Rental Services</title>
+    <meta name="description" content="Cool Care Services offers Home appliances on Rent in Gurgaon with affordable Rental AMC Services. Quote Now for Electronics items for rental!" />
+  </head>
+
+  <body>
+    <style>
+      .profile-pic {
+    width: 200px;
+    max-height: 200px;
+    display: inline-block;
+}
+
+.file-upload {
+    display: none;
+}
+i.fa.fa-camera.upload-button{
+    cursor: pointer;
+}
+.circle {
+    border-radius: 100% !important;
+    overflow: hidden;
+    width: 128px;
+    height: 128px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    margin: 0 auto;
+    cursor: pointer;
+  
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.p-image {
+
+  color: #666666;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.upload-button {
+  font-size: 1.2em;
+}
+
+.upload-button:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  color: #999;
+}
+label {
+    display: flex;
+}
+
+    </style>
+    <!--registration page-->
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="row">
+                        <div class="col-md-4" style="margin: 0 auto;">
+                            <div class="card mt-5">
+                                <div class="card-header" style="background-color: white;">
+                                    <div class="small-12 medium-2 large-2 columns">
+                                        <div class="circle">
+                                          <img class="profile-pic" src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg">
+                                   
+                                        </div>
+                                        <div class="p-image">
+                                          <i class="fa fa-camera upload-button"></i>
+                                           <input class="file-upload" type="file" accept="image/*"/>
+                                        </div>
+                                     </div>
+                                </div>
+                                <div class="card-body">
+                                    <form action="bootstrapform.php" method="post">
+                                        
+                                  <div class="form-group mt-2">
+                                    
+                                    <input type="text" class="form-control" id="exampleInputlastname" name="Enter your Pan Number" placeholder="Enter your Pan Number">
+                                    <div class="">
+                                        <input type="file" id="file" >
+                                          
+                                        </div>
+                                  </div>
+                                  <div class="form-group mt-2">
+                                    
+                                    <input type="text" class="form-control" id="exampleInputphoneno" name="Enter your Addhar Number" placeholder="Enter your Addhar Number">
+                                  </div>
+                                  <div class="form-group mt-2">
+                                    
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                                  </div>
+                                  <div class="form-group mt-2">
+                                    
+                                    <input type="password" class="form-control" id="exampleInputPassword" name="password">
+                                  </div>
+                                  <button type="submit" class="btn btn-primary mt-4" name="create">Create</button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+        <script>
+      $(document).ready(function() {
+
+    
+var readURL = function(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('.profile-pic').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+
+$(".file-upload").on('change', function(){
+    readURL(this);
+});
+
+$(".upload-button").on('click', function() {
+   $(".file-upload").click();
+});
+});
+        </script>
+   
+  </body>
+</html>

@@ -42,7 +42,7 @@
               <div class="row">
                 <div class="d-flex">
                   <div class="col-md-6" id="media-logo">
-                      <a href=""><img src="images/logo/coolcarelogo.jpg" class="w-25"></a>
+                      <a href="index.html"><img src="images/logo/coolcarelogo.jpg" class="w-25"></a>
                   </div>
                   <div class="col-md-6 text-end pt-4">
                     <div class="top-icon" style="cursor: pointer; padding: 0 44px;">
@@ -65,14 +65,14 @@
                               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                   <ul class="navbar-nav" id="header-ul">
                                     <li class="nav-item">
-                                      <a class="nav-link" aria-current="page" href="#">Home</a>
+                                      <a class="nav-link" aria-current="page" href="index.html">Home</a>
                                     </li>
                                     <li class="nav-item dropdown">
                                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                           Laptop
                                       </a>
                                       <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Laptop on Rent</a></li>
+                                        <li><a class="dropdown-item" href="laptop-on-rent-gurgaon.html">Laptop on Rent</a></li>
                                       </ul>
                                     </li>
                                     <li class="nav-item dropdown">
@@ -80,7 +80,7 @@
                                           Heater
                                       </a>
                                       <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Laptop on Rent</a></li>
+                                        <li><a class="dropdown-item" href="#">Heater On Rent</a></li>
                                       </ul>
                                     </li>
                                     <li class="nav-item dropdown">
@@ -88,11 +88,14 @@
                                           AC on Rent
                                       </a>
                                       <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Laptop on Rent</a></li>
+                                        <li><a class="dropdown-item" href="#">Window AC on Rent</a></li>
+                                        <li><a class="dropdown-item" href="#">Split AC on Rent</a></li>
+                                        <li><a class="dropdown-item" href="#">DUCTABLE AC ON RENT</a></li>
+                                        <li><a class="dropdown-item" href="#">TOWER AC ON RENT</a></li>
                                       </ul>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link "aria-current="page" href="#">washing Machine</a>
+                                      <a class="nav-link "aria-current="page" href="#">Washing Machine</a>
                                     </li>
                                     <li class="nav-item">
                                       <a class="nav-link "aria-current="page" href="#">Refrigerator</a>
@@ -109,8 +112,13 @@
                                     <li class="nav-item">
                                       <a class="nav-link "aria-current="page" href="#">R.O</a>
                                     </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link"aria-current="page" href="#">Furnitures</a>
+                                    <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Furnitures
+                                      </a>
+                                      <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Window AC on Rent</a></li>
+                                      </ul>
                                     </li>
                                     
                                   </ul>
@@ -498,18 +506,17 @@
                       </div>
                       <div class="cared-body">
                         <ul class="CoolCare">
-                         <a href="" class="text-decoration-none text-dark"><li>Best price & Best service.</li></a> 
-                         <a href="" class="text-decoration-none  text-dark"><li>Regular follow ups..</li></a> 
-                         <a href="" class="text-decoration-none  text-dark"><li>Experience technical team does the work</li></a> 
-                         <a href="" class="text-decoration-none  text-dark"><li> Best post-sale support</li></a> 
-                         <a href="" class="text-decoration-none  text-dark"><li> Our own technicians will do installation/service.</li></a> 
-                         <a href="" class="text-decoration-none text-dark"><li>Technicians availability from 10 AM – 10 PM. </li></a> 
-                         <a href="" class="text-decoration-none text-dark"><li> 7 days working. </li></a> 
-                         <a href="" class="text-decoration-none  text-dark"><li> Highly Trained Technicians.</li></a> 
-                         <a href=""  class="text-decoration-none text-dark"><li> Custom and Affordable AMC Plans. </li></a> 
-                         <a href=""  class="text-decoration-none  text-dark"><li>Latest technical machines to repair appliances.</li></a> 
-                         <a href=""  class="text-decoration-none  text-dark"><li> Personal interaction for customer satisfaction.</li></a> 
-  
+                        <li>Best price & Best service.</li>
+                         <li>Regular follow ups..</li>
+                          <li>Experience technical team does the work</li>
+                         <li> Best post-sale support</li>
+                         <li> Our own technicians will do installation/service.</li>
+                         <li> Technicians availability from 10 AM – 10 PM. </li>
+                         <li> 7 days working. </li>
+                         <li> Highly Trained Technicians.</li>
+                         <li> Custom and Affordable AMC Plans. </li>
+                         <li> Latest technical machines to repair appliances.</li>
+                         <li> Personal interaction for customer satisfaction.</li>
                         </ul>
                       </div>
                     </div>
@@ -621,7 +628,7 @@
 <!-- wpp-btn-mobile -->
     </section>
         <!-- end footer start-->
-    
+        <a id="back-top" class="text-decoration-none"></a>
     
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="js/custom.js"></script>
@@ -741,5 +748,24 @@
           });
         });
       </script>
+      <script>
+        var btn = $('#back-top');
+   
+               $(window).scroll(function() {
+               if ($(window).scrollTop() > 300) {
+                   btn.addClass('show');
+               } else {
+                   btn.removeClass('show');
+               }
+               });
+   
+               btn.on('click', function(e) {
+               e.preventDefault();
+               $('html, body').animate({scrollTop:0}, '300');
+               });
+   
+   
+   
+       </script>
   </body>
 </html>
