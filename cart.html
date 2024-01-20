@@ -163,7 +163,7 @@
 
     <!----------------------------------------------------- -Cart checkout-------------------------- -->
 
-    <section class="h-100 gradient-custom">
+    <section class=" ">
       <div class="container py-5">
         <div class="row d-flex justify-content-center my-4">
           <div class="col-md-8">
@@ -357,118 +357,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-      
-    <script>
-     $(document).ready(function() {
-    $('#show-hidden-menu').click(function(e) {
-        e.preventDefault(); // Prevent the default behavior of the anchor link
-        $('#hiddenContent').slideToggle('slow');
-        $('#arrow-icon i').toggleClass('fa-arrow-down fa-arrow-up');
-    });
-});
-      </script>
-    <script>
-        $(document).ready(function () {
-          var navbar = $(".navbar");
-    
-          $(window).scroll(function () {
-            if ($(window).scrollTop() >= 100) {
-              navbar.addClass("scrolled");
-            } else {
-              navbar.removeClass("scrolled");
-            }
-          });
-        });
-      </script>
-    
-  
-    <script>
-        $(document).ready(function(){
-          $('#owl-carousel').owlCarousel({
-            items: 3,
-            loop: true,
-            margin: 10,
-            nav: true,
-            navText:false,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            responsive: {
-              0: {
-                items: 1
-              },
-              600: {
-                items: 3
-              },
-              1000: {
-                items: 1
-              }
-            }
-          });
-        });
-      </script>
-    <script>
-     $(document).ready(function(){
-    $("#my-unique-carousel").owlCarousel({
-      items: 3,
-      loop: true,
-      margin: 30,
-      autoplay: true,
-      autoplayTimeout: 3000,
-      responsive: {
-              0: {
-                items: 1
-              },
-              600: {
-                items: 4
-              },
-              1000: {
-                items: 4
-              }
-            }
-    });
-  });
-    </script>
-    <script>
-    $(document).ready(function(){
-  $("#brand-slider").owlCarousel({
-    items: 3,
-    loop: true,
-    margin: 30,
-    autoplay: true,
-     slideTransition: 'linear',
-    autoplayTimeout:2000, // Adjust this value for slower motion
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 4
-      },
-      1000: {
-        items: 5
-      }
-    }
-  });
-});
-     </script>
-      
-      
-    <script>
-        $(document).ready(function(){
-            $(".icon").on("click", function(e){
-              e.preventDefault();
-              $(this).toggleClass("selected");
-            })
-          });
-    </script>
-    <script>
-        $(document).ready(function(){
-          // Hide the element with the ID "myElement" when the button with ID "closeButton" is clicked
-          $('#closeButton').click(function(){
-            $('#myElement').hide();
-          });
-        });
-      </script>
+    <script src="js/bootstrap.bundle.min.js"></script> 
+     
   </body>
 </html>
