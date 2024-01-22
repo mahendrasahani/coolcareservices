@@ -197,7 +197,16 @@ h6.card-title.text-center.categry{
   
   color: #454545;
 }
-
+ul.dropdown-menu li {
+  padding: 0 0 0 0;
+  margin: 0 -15px 0 0;
+}
+ul.dropdown-menu.dropdown-menu-end.login-drop.show {
+  padding: 8px 16px 1px 2px;
+}
+ul.dropdown-menu.dropdown-menu-end.login-drop.show:hover {
+ color: #01b7de !important;
+}
 .time{
   font-size: 10px;
   padding: 16px 0 0 0;
@@ -502,7 +511,11 @@ h3.text-center.mt-5.mb-5.before::before {
     padding: 0 0px !important; 
     display: inline-flex;
     font-size: 10px;
+    
+   
 }
+
+
   #media-logo img{
     width: 91% !important;
     margin-top: 14px !important;

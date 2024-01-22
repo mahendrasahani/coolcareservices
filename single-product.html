@@ -22,7 +22,7 @@
 
         .select-box select,
         input {
-            width: 100%;
+            width: 81%;
             padding: 10px;
         }
 
@@ -45,7 +45,6 @@
         .product-quantity-btns button {
             border-radius: 5px;
             font-size: 13px !important;
-            padding: 15px !important;
         }
 
         .cart-count {
@@ -60,6 +59,7 @@
             top: -8px;
             left: -12px;
         }
+        
     </style>
 
 
@@ -98,7 +98,13 @@
                             <a href="#" class="d-flex">
                                 <i class="fa-solid fa-cart-shopping px-2" style="color: #676767;"></i><span
                                     class="cart-count" id="cartItemCount">0</span></a>
-                            <a href="login.html"><i class="fa-regular fa-user px-2" style="color: #676767;"></i> </a>
+                                    <li class="dropdown d-inline" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-regular fa-user px-2" style="color: #676767;"></i>
+                                    </li>
+                                    <ul class="dropdown-menu dropdown-menu-end login-drop" id="" aria-labelledby="dropdownUser1">
+                                        <li><a class="dropdown-item fw-bold" href="registration.html" style=" color: #01316b;">Edit Profile</a></li>
+                                        <li><a class="dropdown-item fw-bold" href="login.html" style=" color: #01316b;">Login</a></li>
+                                    </ul>
                         </div>
                     </div>
                 </div>
@@ -124,7 +130,7 @@
                                         Laptop
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Laptop on Rent</a></li>
+                                        <li><a class="dropdown-item" href="laptop-on-rent-gurgaon.html">Laptop on Rent</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -175,8 +181,6 @@
 
         <!-- secound-Header end -->
     </header>
-
-
     <section id="banner-image">
         <!-- breadcrumb strat -->
         <div class="container">
@@ -186,7 +190,7 @@
                     <nav aria-label="breadcrumb" style="margin: 0 auto;">
                         <ol class="breadcrumb d-flex justify-content-center">
                             <li class="breadcrumb-item"><a href="#" class="text-white">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#" class="text-white">Laptop</a></li>
+                            <li class="breadcrumb-item"><a href="laptop-on-rent-gurgaon.html" class="text-white">Laptop</a></li>
                             <li class="breadcrumb-item active pt-1" aria-current="page"
                                 style="color: #01b7e0; font-size: 14px;">HP Laptop Core I5</li>
                         </ol>
@@ -196,8 +200,6 @@
         </div>
         <!-- breadcrumb end -->
     </section>
-
-
     <section>
         <div class="container">
             <div class="row mt-5">
@@ -222,12 +224,12 @@
                             </div>
                         </div>
                         <div class="product-details">
-                            <h1>HP Laptop core i5</h1>
+                            <h1 class="fs-3">HP Laptop core i5</h1>
                             <p>Product Code: HP Core i5</p>
                             <p> Availability: In Stock</p>
                         </div>
                         <div class="prpduct-price">
-                            <h3>Rs 1000 / Month</h3>
+                            <h4>Rs 1000 / Month</h4>
                         </div>
                         <form action="#">
                             <div class="select-box">
@@ -242,32 +244,20 @@
                                 </select>
                                 <label for="select-option" class="month-select mt-2">Delivery Date:</label> <br>
                                 <input type="date" id="selectDate" name="selectDate">
-                                </select>
+                                
                             </div>
-
-
                             <div class="product-quantity d-flex mt-3">
                                 <div class="mx-2 d-flex">
                                     <p class="mx-2 m-auto"> Qty</p>
-                                    <button class="btn btn-primary me-2" onclick="decrementQuantity(event)"
-                                        style="background-color: #01316b">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-
-                                    <input type="number" id="quantity" value="0" min="0">
-
-                                    <button class="btn btn-primary ms-2" onclick="incrementQuantity(event)"
-                                        style="background-color: #01316b">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
-                                </div>
-                                <div class="product-quantity-btns d-flex">
-                                    <a href="" class="product-quantity-btns"><button type="button"
-                                            class="btn btn-warning animation p-3 mx-2" onclick="addToCart()">Add to
+                                    <input type="number" id="quantity" value="0" min="0" style="width: 20%; padding: 0;">
+                                    <a href="" class="product-quantity-btns">
+                                        <button type="button"
+                                            class="btn btn-warning animation  mx-2" onclick="addToCart()">Add to
                                             Cart</button></a>
                                     <a href="" class="product-quantity-btns"><button type="button"
-                                            class="btn btn-warning animation p-3">Add to Wishlist</button></a>
+                                            class="btn btn-warning animation ">Add to Wishlist</button></a>
                                 </div>
+                                
                             </div>
                         </form>
                     </div>
@@ -275,8 +265,6 @@
             </div>
         </div>
     </section>
-
-
     <section>
         <div class="container mt-5">
             <ul class="nav nav-tabs" id="myTabs">
@@ -289,13 +277,12 @@
             </ul>
 
             <div class="tab-content mt-2">
-                <div class="tab-pane fade show active" id="content1">
-                    <h3>SPECIFICATION﻿ / DESCRIPTION</h3>
-                    <p>Rating 3 star</p>
+                <div class="tab-pane fade show active p-tag" id="content1">
+                    <h6>SPECIFICATION﻿ / DESCRIPTION</h6>
+                    <p >Rating 3 star</p>
                     <p>condition: good</p>
                     <p>Brand of the product may vary</p>
                     <p>Product may not be new, But it will be in good working condition</p>
-
 
                     <p>SECURITY...(CASH NIL) PDC (Post Dated Cheque) 31December 2024 Rs.7000. It will be returned back
                         at the time of Pickup.
@@ -310,7 +297,7 @@
                         ac.</p>
                 </div>
                 <div class="tab-pane fade" id="content2">
-                    <h3>Write a review here</h3>
+                    <h6>Write a review here</h6>
                 </div>
             </div>
         </div>
@@ -468,7 +455,12 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-
+    <script>
+        // Trigger click event on page load to open the date picker calendar
+        $(document).ready(function() {
+        $('#selectDate').click();
+    });
+    </script>
     <script>
         $(document).ready(function ()
         {

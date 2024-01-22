@@ -18,7 +18,7 @@
     <meta name="description" content="Cool Care Services offers Home appliances on Rent in Gurgaon with affordable Rental AMC Services. Quote Now for Electronics items for rental!" />
   </head>
   <body>
-
+    
     <!-- Top-Header -->
     <section class="top-header"  id="myElement">
         <div class="container-fluid">
@@ -46,10 +46,17 @@
                   </div>
                   <div class="col-md-6 text-end pt-4">
                     <div class="top-icon" style="cursor: pointer; padding: 0 44px;">
-                      <a href=""><i class="fa-solid fa-magnifying-glass px-2" style="color: #676767;"></i></a>
+                      <i class="fa-solid fa-magnifying-glass px-2" style="color: #676767;"></i>
                       <a href=""><i class="fa-regular fa-heart px-2" style="color: #676767;"></i></a>
                       <a href=""><i class="fa-solid fa-cart-shopping px-2" style="color: #676767;"></i></a>
-                      <a href="login.html"><i class="fa-regular fa-user px-2" style="color: #676767;"></i> </a> 
+                  
+                        <li class="dropdown d-inline" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-regular fa-user px-2" style="color: #676767;"></i>
+                        </li>
+                        <ul class="dropdown-menu dropdown-menu-end login-drop" id="" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item fw-bold" href="registration.html" style=" color: #01316b;">Edit Profile</a></li>
+                            <li><a class="dropdown-item fw-bold" href="login.html" style=" color: #01316b;">Login</a></li>
+                        </ul>
                     </div>
                   </div>
                 </div>
@@ -636,7 +643,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-      
+    <script>
+      $(document).ready(function() {
+          // Toggle search bar visibility
+          $("#toggleSearch").click(function() {
+              $(".search-bar-open").slideToggle();
+          });
+      });
+  </script>
     <script>
           $(document).ready(function() {
           $('#show-hidden-menu').click(function(e) {
